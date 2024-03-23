@@ -1,15 +1,20 @@
 
 import { features } from './data'
+import styles from './style.module.css'
 export const Features = () =>{
    
-    return<section>
-    <h3> The power of Premium</h3>
-    <div>
+
+    return<section className={styles.features}>
+    <h3 className={styles.title}> The power of Premium</h3>
+    <div className={styles.list}>
         {features.map((feature) => (
-            <div>
+            <div className={styles.item}>
             <img src={feature.image}/>
-        <h5>{feature.title}</h5>
-        <p>{feature.description}</p>
+            <div>
+            <h5 className={styles.title}>{feature.title}</h5>
+        <p className={styles.description}>{feature.description}</p>
+            </div>
+        
             </div>
         ))}
        
